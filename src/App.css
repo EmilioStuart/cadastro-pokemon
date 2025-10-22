@@ -1,38 +1,82 @@
-.App {
+body {
+  background: linear-gradient(120deg, #d7eaff 0%, #ffeab7 100%);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(25,25,112,0.11);
+}
+
+h1 {
   text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6b36bc;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-pokemon {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 18px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  color: #404040;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border-radius: 7px;
+  border: 1px solid #e3e3e3;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background: linear-gradient(90deg, #7b37ff 35%, #2bdeff 100%);
   color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: linear-gradient(90deg, #2bdeff 35%, #7b37ff 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mensagem-sucesso {
+  margin-top: 16px;
+  background: #e6f7ea;
+  color: #316d3a;
+  font-weight: 600;
+  padding: 13px;
+  border-radius: 7px;
+  text-align: center;
+  animation: fadein 0.8s;
+}
+
+@media (max-width: 550px) {
+  .container {
+    max-width: 95vw;
+    padding: 14px;
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    font-size: 1.5rem;
   }
 }
